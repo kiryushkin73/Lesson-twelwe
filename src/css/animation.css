@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-size: 100%;
+
+  background-image: url(/src/img/depositphotos_16757905-stock-photo-an-image-of-a-bright.jpg);
+}
+
+.system {
+  display: flex;
+  justify-content: center;
+}
+.land {
+  margin-top: 100px;
+  position: relative;
+  width: 350px;
+  animation-name: land;
+  animation-duration: 40s;
+  z-index: 1;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 50%;
+}
+
+.moons {
+  position: absolute;
+  top: 250px;
+  left: 800px;
+  animation: 15s moons infinite linear;
+  width: 100px;
+  z-index: 0;
+}
+
+@keyframes moons {
+  0% {
+    width: 60px;
+  }
+  24% {
+    z-index: 0;
+  }
+  25% {
+    top: 110px;
+    left: 1070px;
+    z-index: 2;
+  }
+  50% {
+    width: 160px;
+  }
+  74% {
+    z-index: 2;
+  }
+  75% {
+    top: 330px;
+    left: 640px;
+    z-index: 0;
+  }
+  100% {
+    width: 60px;
+  }
+}
+@keyframes land {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
